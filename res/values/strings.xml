@@ -457,4 +457,8 @@
     <string name="restore_bkup_title">Restore Backup</string>
     <string name="restore_bkup">%s will be restored. Continue?</string>
 
+    <!-- Compilation fix -->
+    <string name="CPU_VIEW_1">1</string>
+    <string name="ver_dialog_Medium_Text">Medium Text</string>
+
 </resources>
