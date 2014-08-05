@@ -429,35 +429,35 @@ Translation by DaniPhii & Garcia98
     <string name="donor">Dona con PayPal</string>
     <string name="paypal">Si encuentras útil esta app</string>
     <!--2.1.18-->
-    <string name="liveoc">Live OC</string>
-    <string name="oc_value">OC Value (%)</string>
-    <string name="oc_target_low">OC Target Low</string>
-    <string name="oc_target_high">OC Target High</string>
+    <string name="liveoc">OC real</string>
+    <string name="oc_value">Valor OC (%)</string>
+    <string name="oc_target_low">Mínimo asignado OC</string>
+    <string name="oc_target_high">Máximo asignado OC</string>
 
-    <string name="pt_initd">Use init.d script</string>
-    <string name="pt_script_name">Script name</string>
-    <string name="mt_calib">Calibrate</string>
+    <string name="pt_initd">Usar script init.d</string>
+    <string name="pt_script_name">Nombre del script</string>
+    <string name="mt_calib">Calibrar</string>
     <string name="msmhotplug">MSM HOTPLUG</string>
-    <string name="pt_msmhotplug">Enable MSM Hotplug</string>
-    <string name="mt_calib_nok">Your device must be plugged and fully charged.</string>
-    <string name="mt_calib_ok">Tap on Calibrate button then unplug the device.</string>
-    <string name="mt_calib_chk">Reboot after calibration</string>
-    <string name="boot_wait">Please wait until boot sequence is finished…</string>
-    <string name="no_file">%s does not exist !</string>
-    <string name="no_settings">No advanced settings available</string>
-    <string name="bk_name">Backup name</string>
-    <string name="bk_ok">Backup operation succeeded.</string>
-    <string name="bk_nok">Error ! Backup operation failed.</string>
+    <string name="pt_msmhotplug">Activar MSM Hotplug</string>
+    <string name="mt_calib_nok">Tu dispositivo debe estar conectado al cargador y cargado completamente.</string>
+    <string name="mt_calib_ok">Toca el botón "Calibrar", después desconecta el cargador.</string>
+    <string name="mt_calib_chk">Reiniciar tras la calibración</string>
+    <string name="boot_wait">Por favor, espere hasta que la secuencia de arranque haya terminado…</string>
+    <string name="no_file">¡%s no existe!</string>
+    <string name="no_settings">No hay ajustes avanzados disponibles</string>
+    <string name="bk_name">Nombre de la copia de seguridad</string>
+    <string name="bk_ok">La copia de seguridad ha sido creada correctamente.</string>
+    <string name="bk_nok">¡Error! La creación de la copia de seguridad ha fallado.</string>
 
-    <string name="err_file">Error ! Can\'t create folder %s</string>
-    <string name="backup_restore">Backup and Restore Settings</string>
+    <string name="err_file">¡Error! No se puede crear la carpeta %s</string>
+    <string name="backup_restore">Ajustes de copia de seguridad</string>
 
-    <string name="bkup_del_title">Delete Backup</string>
-    <string name="no_bkup_info">No Backups</string>
-    <string name="no_bkup_sinfo">Use menu to create backup.</string>
-    <string name="bkup_info">Tap on item to restore it. Longtap to delete it.</string>
+    <string name="bkup_del_title">Eliminar copia de seguridad</string>
+    <string name="no_bkup_info">No hay copias de seguridad</string>
+    <string name="no_bkup_sinfo">Usa el menú para crear una copia de seguridad.</string>
+    <string name="bkup_info">Toca la copia a restaurar. Mantén el toque para eliminarla.</string>
     <string name="no">NO</string>
-    <string name="create_bkup">Create Backup</string>
-    <string name="restore_bkup_title">Restore Backup</string>
-    <string name="restore_bkup">%s will be restored. Continue?</string>
+    <string name="create_bkup">Crear copia de seguridad</string>
+    <string name="restore_bkup_title">Restaurar copia de seguridad</string>
+    <string name="restore_bkup">La copia %s será restaurada. ¿Continuar?</string>
 </resources>
