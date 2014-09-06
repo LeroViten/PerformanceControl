@@ -43,6 +43,7 @@ public class HideTabs extends Activity implements Constants, ActivityThemeChange
                             s+=dataAdapter.getItem(i).getId()+":";
                         }
                         mPreferences.edit().putString("tab_ids",s).apply();
+                        MainActivity.thide=true;
                     }
                 }
             };
