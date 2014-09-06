@@ -18,7 +18,7 @@
                 android:layout_marginRight="10dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:textSize="18sp"
+                android:textSize="17sp"
                 android:background="@color/pc_cat_gray"
                 android:textColor="@color/pc_white" />
 
@@ -37,7 +37,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/ps_home_enabled"
                     android:id="@+id/ihome"
-                    android:textColor="@color/pc_blue"
+                    android:textColor="@android:color/holo_blue_light"
                     android:textSize="17sp"
                     android:layout_toLeftOf="@+id/hview"
                     android:layout_alignParentStart="true"
@@ -51,7 +51,7 @@
                     android:layout_alignParentRight="true"
                     android:textSize="18sp"
                     android:gravity="right"
-                    android:textColor="@color/pc_blue" />
+                    android:textColor="@android:color/holo_blue_light" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -124,7 +124,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="20dp"
-                android:textSize="18sp"
+                android:textSize="17sp"
                 android:background="@color/pc_cat_gray"
                 android:textColor="@color/pc_white" />
 
@@ -143,7 +143,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/ps_menuback_enabled"
                     android:id="@+id/imenu"
-                    android:textColor="@color/pc_blue"
+                    android:textColor="@android:color/holo_blue_light"
                     android:textSize="17sp"
                     android:layout_toLeftOf="@+id/mview"
                     android:layout_alignParentStart="true"
@@ -157,7 +157,7 @@
                     android:layout_alignParentRight="true"
                     android:textSize="18sp"
                     android:gravity="right"
-                    android:textColor="@color/pc_blue" />
+                    android:textColor="@android:color/holo_blue_light" />
             </RelativeLayout>
 
             <RelativeLayout
