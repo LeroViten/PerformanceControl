@@ -43,7 +43,7 @@ public class PackAdapter extends ArrayAdapter<PackItem> {
         View rowView = convertView;
         if (rowView == null) {
             LayoutInflater inflater = context.getLayoutInflater();
-            rowView = inflater.inflate(R.layout.pack_item, null);
+            rowView = inflater.inflate(R.layout.pack_item, parent,false);
             ViewHolder viewHolder = new ViewHolder();
             viewHolder.app = (TextView) rowView.findViewById(R.id.packname);
             viewHolder.pack = (TextView) rowView.findViewById(R.id.packraw);
@@ -52,9 +52,9 @@ public class PackAdapter extends ArrayAdapter<PackItem> {
         }
 
         ViewHolder holder = (ViewHolder) rowView.getTag();
-        final String npack=list.get(position).getPackName();
+        final String npack=getItem(position).getPackName();
         holder.pack.setText(npack);
-        holder.app.setText(list.get(position).getAppName());
+        holder.app.setText(getItem(position).getAppName());
         try {
             PackageInfo packageInfo = context.getPackageManager().getPackageInfo(npack, 0);
             holder.image.setImageDrawable(context.getPackageManager().getApplicationIcon(packageInfo.applicationInfo));

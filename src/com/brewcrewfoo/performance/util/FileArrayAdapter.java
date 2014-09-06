@@ -42,7 +42,7 @@ public class FileArrayAdapter extends ArrayAdapter<Item>{
 
         if (v == null) {
             LayoutInflater vi = (LayoutInflater)c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            v = vi.inflate(id, null);
+            v = vi.inflate(id, parent,false);
         }
 
         final Item o = items.get(position);

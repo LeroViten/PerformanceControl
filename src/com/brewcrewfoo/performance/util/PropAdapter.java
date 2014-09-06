@@ -38,7 +38,7 @@ public class PropAdapter extends ArrayAdapter<Prop> {
 
         if (v == null) {
             LayoutInflater vi = (LayoutInflater)c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            v = vi.inflate(id, null);
+            v = vi.inflate(id, parent,false);
         }
 
         final Prop p = props.get(position);
