@@ -7,20 +7,28 @@
             android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="10dip">
+            android:padding="10dp">
 
-            <Switch
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/pt_home_enabled"
-                android:id="@+id/switchhome"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:textSize="17sp"
                 android:background="@color/pc_cat_gray"
-                android:textColor="@color/pc_white" />
+                android:id="@+id/lsw1">
+
+                <Switch
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pt_home_enabled"
+                    android:id="@+id/switchhome"
+                    android:layout_marginLeft="10dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/pc_white"
+                    android:layout_marginRight="10dp"
+                    android:singleLine="true" />
+            </LinearLayout>
 
             <RelativeLayout
                 android:id="@+id/lhome1"
@@ -37,7 +45,6 @@
                     android:layout_height="wrap_content"
                     android:text="@string/ps_home_enabled"
                     android:id="@+id/ihome"
-                    android:textColor="@android:color/holo_blue_light"
                     android:textSize="17sp"
                     android:layout_toLeftOf="@+id/hview"
                     android:layout_alignParentStart="true"
@@ -50,10 +57,12 @@
                     android:id="@+id/hview"
                     android:layout_alignParentRight="true"
                     android:textSize="18sp"
-                    android:gravity="right"
-                    android:textColor="@android:color/holo_blue_light" />
+                    android:gravity="right" />
             </RelativeLayout>
-
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/pc_light_gray"/>
             <RelativeLayout
                 android:orientation="horizontal"
                 android:layout_width="fill_parent"
@@ -114,19 +123,27 @@
 
             </RelativeLayout>
 
-            <Switch
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/pt_menuback_enabled"
-                android:id="@+id/switchmenu"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="20dp"
-                android:textSize="17sp"
                 android:background="@color/pc_cat_gray"
-                android:textColor="@color/pc_white" />
+                android:layout_marginTop="20dp"
+                android:id="@+id/lsw2">
+
+                <Switch
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pt_menuback_enabled"
+                    android:id="@+id/switchmenu"
+                    android:paddingBottom="6dp"
+                    android:paddingTop="6dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/pc_white"
+                    android:layout_marginRight="10dp"
+                    android:singleLine="true" />
+            </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="fill_parent"
@@ -143,7 +160,6 @@
                     android:layout_height="wrap_content"
                     android:text="@string/ps_menuback_enabled"
                     android:id="@+id/imenu"
-                    android:textColor="@android:color/holo_blue_light"
                     android:textSize="17sp"
                     android:layout_toLeftOf="@+id/mview"
                     android:layout_alignParentStart="true"
@@ -156,10 +172,12 @@
                     android:id="@+id/mview"
                     android:layout_alignParentRight="true"
                     android:textSize="18sp"
-                    android:gravity="right"
-                    android:textColor="@android:color/holo_blue_light" />
+                    android:gravity="right" />
             </RelativeLayout>
-
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/pc_light_gray"/>
             <RelativeLayout
                 android:orientation="horizontal"
                 android:layout_width="fill_parent"
