@@ -74,6 +74,27 @@ public class MainActivity extends Activity implements Constants,ActivityThemeCha
         super.onSaveInstanceState(saveState);
     }
 
+    /**
+     * Get a list of titles for the tabstrip to display depending on if the
+     * @return String[] containing titles
+     */
+    private String[] getTitles() {
+        List<String> titleslist = new ArrayList<String>();
+        String def_ids="";
+        for(int i=0;i<getResources().getStringArray(R.array.tabs).length;i++) def_ids+=i+":";
+        final String Tids=mPreferences.getString("tab_ids",def_ids);
+
+        for(int i=0;i<getResources().getStringArray(R.array.tabs).length;i++) {
+            String tid=Tids.split(":")[i];
+            if((tid!=null)&&(!tid.equals(""))) {
+                int id = Integer.valueOf(tid);
+                final String sTab=getResources().getStringArray(R.array.tabs)[id];
+                boolean isvisible = mPreferences.getBoolean(sTab, true);
+                if (Helpers.is_Tab_available(id) && isvisible) titleslist.add(sTab);
+            }
+        }
+        return titleslist.toArray(new String[titleslist.size()]);
+    }
 
     class TitleAdapter extends FragmentPagerAdapter {
         String titles[] = getTitles();
@@ -82,43 +103,49 @@ public class MainActivity extends Activity implements Constants,ActivityThemeCha
         public TitleAdapter(FragmentManager fm) {
             super(fm);
 
-            int i=0;
+            String def_ids="";
+            for(int i=0;i<getResources().getStringArray(R.array.tabs).length;i++) def_ids+=i+":";
+            final String Tids=mPreferences.getString("tab_ids",def_ids);
+
             int j=0;
-            while (i<getResources().getStringArray(R.array.tabs).length) {
-                boolean isvisible=mPreferences.getBoolean(getResources().getStringArray(R.array.tabs)[i],true);
-                if(Helpers.is_Tab_available(i) && isvisible){
-                    switch(i){
-                        case 0:
-                            frags[j] = new CPUSettings();
-                            break;
-                        case 1:
-                            frags[j] = new CPUAdvanced();
-                            break;
-                        case 2:
-                            frags[j] = new BatteryInfo();
-                            break;
-                        case 3:
-                            frags[j] = new MemSettings();
-                            break;
-                        case 4:
-                            frags[j] = new VoltageControlSettings();
-                            break;
-                        case 5:
-                            frags[j] = new Advanced();
-                            break;
-                        case 6:
-                            frags[j] = new TimeInState();
-                            break;
-                        case 7:
-                            frags[j] = new DiskInfo();
-                            break;
-                        case 8:
-                            frags[j] = new Tools();
-                            break;
+            for(int i=0;i<getResources().getStringArray(R.array.tabs).length;i++) {
+                String tid=Tids.split(":")[i];
+                if((tid!=null)&&(!tid.equals(""))) {
+                    int id=Integer.valueOf(tid);
+                    boolean isvisible = mPreferences.getBoolean(getResources().getStringArray(R.array.tabs)[id], true);
+                    if (Helpers.is_Tab_available(id) && isvisible) {
+                        switch (id) {
+                            case 0:
+                                frags[j] = new CPUSettings();
+                                break;
+                            case 1:
+                                frags[j] = new CPUAdvanced();
+                                break;
+                            case 2:
+                                frags[j] = new BatteryInfo();
+                                break;
+                            case 3:
+                                frags[j] = new MemSettings();
+                                break;
+                            case 4:
+                                frags[j] = new VoltageControlSettings();
+                                break;
+                            case 5:
+                                frags[j] = new Advanced();
+                                break;
+                            case 6:
+                                frags[j] = new TimeInState();
+                                break;
+                            case 7:
+                                frags[j] = new DiskInfo();
+                                break;
+                            case 8:
+                                frags[j] = new Tools();
+                                break;
+                        }
+                        j++;
                     }
-                    j++;
                 }
-                i++;
             }
         }
 
@@ -170,21 +197,7 @@ public class MainActivity extends Activity implements Constants,ActivityThemeCha
 
     }
 
-    /**
-     * Get a list of titles for the tabstrip to display depending on if the
-     * @return String[] containing titles
-     */
-    private String[] getTitles() {
-        List<String> titleslist = new ArrayList<String>();
-        int i=0;
-        while (i<getResources().getStringArray(R.array.tabs).length) {
-            boolean isvisible=mPreferences.getBoolean(getResources().getStringArray(R.array.tabs)[i],true);
-            if(Helpers.is_Tab_available(i) && isvisible)
-                titleslist.add(getResources().getStringArray(R.array.tabs)[i]);
-            i++;
-        }
-        return titleslist.toArray(new String[titleslist.size()]);
-    }
+
 
     @Override
     public boolean isThemeChanged() {

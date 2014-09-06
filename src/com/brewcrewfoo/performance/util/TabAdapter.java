@@ -37,7 +37,7 @@ public class TabAdapter extends ArrayAdapter<Tab> {
         ViewHolder holder = null;
         if (convertView == null) {
             LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = vi.inflate(R.layout.tab_item, null);
+            convertView = vi.inflate(R.layout.tab_item, parent,false);
 
             holder = new ViewHolder();
             holder.name = (TextView) convertView.findViewById(R.id.label);
@@ -49,7 +49,7 @@ public class TabAdapter extends ArrayAdapter<Tab> {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        Tab t = TabList.get(position);
+        Tab t = getItem(position);
         holder.name.setText(t.getName());
         if(t.isSelected()){
             holder.status.setImageDrawable(context.getResources().getDrawable(android.R.drawable.checkbox_on_background));

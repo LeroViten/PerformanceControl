@@ -10,11 +10,11 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ListView;
 
 import com.brewcrewfoo.performance.R;
 import com.brewcrewfoo.performance.util.ActivityThemeChangeInterface;
 import com.brewcrewfoo.performance.util.Constants;
+import com.brewcrewfoo.performance.util.DragSortListView;
 import com.brewcrewfoo.performance.util.Helpers;
 import com.brewcrewfoo.performance.util.Tab;
 import com.brewcrewfoo.performance.util.TabAdapter;
@@ -26,30 +26,67 @@ public class HideTabs extends Activity implements Constants, ActivityThemeChange
     private boolean mIsLightTheme;
     SharedPreferences mPreferences;
     private final Context context=this;
-    TabAdapter dataAdapter = null;
+    private TabAdapter dataAdapter;
 
+
+    private DragSortListView.DropListener onDrop =
+            new DragSortListView.DropListener() {
+                @Override
+                public void drop(int from, int to) {
+                    if (from != to) {
+                        Tab item = dataAdapter.getItem(from);
+                        dataAdapter.remove(item);
+                        dataAdapter.insert(item, to);
+                        dataAdapter.notifyDataSetChanged();
+                        String s="";
+                        for(int i=0;i<dataAdapter.getCount();i++){
+                            s+=dataAdapter.getItem(i).getId()+":";
+                        }
+                        mPreferences.edit().putString("tab_ids",s).apply();
+                    }
+                }
+            };
+    private DragSortListView.RemoveListener onRemove =
+            new DragSortListView.RemoveListener() {
+                @Override
+                public void remove(int which) {
+                    dataAdapter.remove(dataAdapter.getItem(which));
+                }
+            };
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         setTheme();
         setContentView(R.layout.hide_tabs);
-        ListView listView = (ListView) findViewById(R.id.applist);
+        DragSortListView listView = (DragSortListView) findViewById(R.id.applist);
+        listView.setDropListener(onDrop);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Tab t = (Tab) parent.getItemAtPosition(position);
-                t.setSelected(! t.isSelected());
+                t.setSelected(!t.isSelected());
                 dataAdapter.notifyDataSetChanged();
             }
         });
         ArrayList<Tab> TabList = new ArrayList<Tab>();
-        int i=0;
-        while (i<getResources().getStringArray(R.array.tabs).length) {
+
+        String def_ids="";
+        for(int i=0;i<getResources().getStringArray(R.array.tabs).length;i++) def_ids+=i+":";
+        final String Tids=mPreferences.getString("tab_ids",def_ids);
+        for(int i=0;i<getResources().getStringArray(R.array.tabs).length;i++) {
+            String tid=Tids.split(":")[i];
+            if((tid!=null)&&(!tid.equals(""))) {
+                int id=Integer.valueOf(tid);
+                final String sTab=getResources().getStringArray(R.array.tabs)[id];
+                if (Helpers.is_Tab_available(id)) TabList.add(new Tab(sTab, mPreferences.getBoolean(sTab, true), id));
+            }
+        }
+
+        /*for(int i=0;i<getResources().getStringArray(R.array.tabs).length;i++) {
             Tab t = new Tab(getResources().getStringArray(R.array.tabs)[i],mPreferences.getBoolean(getResources().getStringArray(R.array.tabs)[i],true),i);
             if(Helpers.is_Tab_available(i)) TabList.add(t);
-            i++;
-        }
+        }*/
         dataAdapter = new TabAdapter(this,R.layout.tab_item, TabList);
         listView.setAdapter(dataAdapter);
 
