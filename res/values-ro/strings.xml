@@ -303,10 +303,10 @@ Translation by Laurentiu1996
     <string name="prefcat_viber">Vibrare</string>
     <string name="viber_title">Controlul intensităţii vibraţiilor</string>
     <!-- PC Settings -->
-    <string name="pt_use_light_theme">Utilizaţi tema holo light</string>
-    <string name="ps_use_light_theme">Dacă este bifată, aplicaţia va folosi tem holo light</string>
-    <string name="pt_widget_bg_color">Culoarea de fond pentru widget</string>
-    <string name="pt_widget_text_color">Culoarea textului pentru widget</string>
+    <string name="pt_use_light_theme">Utilizare temă holo light</string>
+    <string name="ps_use_light_theme">Dacă este bifată, aplicaţia va folosi tema holo light</string>
+    <string name="pt_widget_bg_color">Culoare de fond pentru widget</string>
+    <string name="pt_widget_text_color">Culoare text pentru widget</string>
     <string name="pt_ver">"Versiune - "</string>
     <string name="pt_show_tabs">Vizibilitate Tab-uri</string>
     <!-- Color picker -->
@@ -443,7 +443,7 @@ Translation by Laurentiu1996
     <string name="bkup_del_title">Șterge Backup</string>
     <string name="no_bkup_info">Nu există fișiere backup</string>
     <string name="no_bkup_sinfo">Utilizează menu pentru a cree un nou fișier backup.</string>
-    <string name="bkup_info">Tap on item to restore it. Longtap to delete it.</string>
+    <string name="bkup_info">Atingere scurtă pentru restaurare. Atingere lungă pentru ștergere.</string>
     <string name="no">NU</string>
     <string name="create_bkup">Creează Backup</string>
     <string name="restore_bkup_title">Restaurează Backup</string>
