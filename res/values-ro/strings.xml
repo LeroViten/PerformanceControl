@@ -14,13 +14,13 @@ Translation by Laurentiu1996
         <item>Setări Avansate</item>
         <item>Timp de lucru</item>
         <item>Informatii Disk</item>
-        <item>Utile</item>
+        <item>Utilitare</item>
     </string-array>
 
     <string name="menu_tab">Tab-uri</string>
     <!-- Menu -->
     <string name="mt_refresh">Reîmprospătare</string>
-    <string name="mt_app_settings">"Setările Aplicaţiei"</string>
+    <string name="mt_app_settings">Setările Aplicaţiei</string>
     <string name="mt_reset">Resetare</string>
     <string name="mt_restore">Restaurare</string>
     <string name="mt_plus25">Creşte cu 25 mV</string>
@@ -34,7 +34,7 @@ Translation by Laurentiu1996
     <string name="sob">Aplică la bootare</string>
     <string name="ok">OK</string>
     <string name="cancel">Renunţă</string>
-    <string name="mt_gov_ctrl">Setare Governor</string>
+    <string name="mt_gov_ctrl">Setări Governor</string>
 
     <!-- Other settings -->
     <string name="prefcat_free_memory">MEMORIE LIBERĂ</string>
@@ -108,12 +108,12 @@ Translation by Laurentiu1996
     <!-- pfk -->
     <string name="pfk_info">Filtru Phantom Key Presses ver. %s\nAutor Cristoforo Cataldo (Christopher83)</string>
     <string name="prefcat_pfk">FILTRU PHANTOM KEY PRESSES</string>
-    <string name="pt_home_enabled">Filtru pentru tasta Acasă</string>
+    <string name="pt_home_enabled">Filtru tasta Acasă</string>
     <string name="ps_home_enabled">Atingerile ignorate: %s</string>
     <string name="home_allowed_irq_title">Numărul maxim de întreruperi</string>
     <string name="home_report_wait_title">Raportarea timpului de aşteptare (ms)</string>
     <string name="pkf_settings">Setări PKF</string>
-    <string name="pt_menuback_enabled">Filtru pentru tastele Meniu/Înapoi</string>
+    <string name="pt_menuback_enabled">Filtru taste Meniu/Înapoi</string>
     <string name="ps_menuback_enabled">Atingerile ignorate: %s</string>
     <string name="menuback_interrupt_checks_title">Întreruperi verificate</string>
     <string name="menuback_first_err_wait_title">Timpul de aşteptare până la prima eroare (ms)</string>
@@ -192,10 +192,10 @@ Translation by Laurentiu1996
 
     <string name="prefcat_flash_img">FLASH FIŞIER IMG</string>
     <string name="kernel_img_title">Flash KERNEL or RECOVERY</string>
-    <string name="ps_kernel_img">Flash img files. Can choose individual img file or any zip file that contains boot.img or recovery.img</string>
+    <string name="ps_kernel_img">Pot fi selectate fişiere *.img individuale sau orice arhivă zip ce conţine fişiere boot.img sau recovery.img</string>
 
     <string name="btn_choose">Alege %s</string>
-    <string name="unsupported_info">Telefonul dumneavoastră nu este suportat.</string>
+    <string name="unsupported_info">Dispozitivul nu este suportat.</string>
     <string name="flash_info">va fi flash-uit pe partiţia\n%s\n ca şi</string>
     <string name="dir_parent">&lt;DIR părinte&gt;</string>
     <string name="dir">&lt;DIR&gt;</string>
@@ -256,13 +256,13 @@ Translation by Laurentiu1996
     <string name="ksm_sleep">Pauză (ms):</string>
     <string name="uksm">Ultra KSM a fost detectat</string>
     <!-- freezer -->
-    <string name="prefcat_freezer">ÎNGHEȚARE sau DEZGHEȚARE PACHETE</string>
-    <string name="pt_freeze">Îngheaţare pachet</string>
-    <string name="pt_unfreeze">Dezgheţare pachet</string>
-    <string name="ps_freeze">Lista pachetelor instalate in sistem</string>
-    <string name="ps_unfreeze">Lista pachetelor îngheaţate</string>
-    <string name="mt_system_packs">Pachete System</string>
-    <string name="mt_user_packs">Pachete Utilizator</string>
+    <string name="prefcat_freezer">ÎNGHEȚARE sau DEZGHEȚARE APLICAȚII</string>
+    <string name="pt_freeze">Îngheaţare aplicație</string>
+    <string name="pt_unfreeze">Dezgheţare aplicație</string>
+    <string name="ps_freeze">Lista aplicațiilor instalate in sistem</string>
+    <string name="ps_unfreeze">Lista aplicațiilor îngheaţate</string>
+    <string name="mt_system_packs">Aplicații System</string>
+    <string name="mt_user_packs">Aplicații Utilizator</string>
     <string name="freeze_msg">%s va fi îngheaţat. Continuaţi?</string>
     <string name="unfreeze_msg">%s va fi dezgheaţat. Continuaţi?</string>
     <!-- zRam -->
@@ -281,7 +281,7 @@ Translation by Laurentiu1996
     <string name="zram_num_reads">Număr Citiri</string>
     <string name="zram_num_writes">Număr Scrieri</string>
     <!-- builprop -->
-    <string name="prefcat_build_prop">BUILD PROP</string>
+    <string name="prefcat_build_prop">EDITARE BUILD PROP</string>
     <string name="build_prop_title">Editare fișier Build Prop</string>
     <string name="add_prop_title">Adăugare Parametru</string>
     <string name="edit_prop_title">Editare Parametru</string>
@@ -297,18 +297,18 @@ Translation by Laurentiu1996
     <string name="del_prop_msg">%s va fi șters. Continuaţi?</string>
     <string name="ps_build_prop">Repornirea dispozitivului este necesară pentru aplicarea valorilor</string>
     <!-- sysctl -->
-    <string name="prefcat_sysctl">SYSCTL</string>
+    <string name="prefcat_sysctl">EDITARE SYSCTL</string>
     <string name="sysctl_title">Editare SysCtl</string>
     <!-- Vibration Intensity -->
     <string name="prefcat_viber">Vibrare</string>
     <string name="viber_title">Controlul intensităţii vibraţiilor</string>
     <!-- PC Settings -->
-    <string name="pt_use_light_theme">Utilizaţi o temă deschisă</string>
-    <string name="ps_use_light_theme">Dacă este bifată, aplicaţia va folosi o temă deschisă Holo</string>
-    <string name="pt_widget_bg_color">Culoarea Widgetului  bg</string>
-    <string name="pt_widget_text_color">Culoarea textului Widgetului</string>
+    <string name="pt_use_light_theme">Utilizaţi tema holo light</string>
+    <string name="ps_use_light_theme">Dacă este bifată, aplicaţia va folosi tem holo light</string>
+    <string name="pt_widget_bg_color">Culoarea de fond pentru widget</string>
+    <string name="pt_widget_text_color">Culoarea textului pentru widget</string>
     <string name="pt_ver">"Versiune - "</string>
-    <string name="pt_show_tabs">Setare Vizibilitate Tab-uri</string>
+    <string name="pt_show_tabs">Vizibilitate Tab-uri</string>
     <!-- Color picker -->
     <string name="dialog_color_picker">Alegerea Culorii</string>
     <string name="press_color_to_apply">Apăsaţi pe Culoare pentru aplicare</string>
@@ -372,11 +372,11 @@ Translation by Laurentiu1996
     <string name="ps_zram_info">Zram trebuie oprit pentru a ajusta valoarea</string>
     <!-- beta2-->
     <!-- 2.1.10-->
-    <string name="prefcat_wifi_pm">WiFi SLEEP POWER MODE</string>
+    <string name="prefcat_wifi_pm">MODUL WiFi SLEEP POWER</string>
     <string name="pt_wifi_pm">WiFi PM</string>
     <string name="prefcat_mc_ps">MULTICORE POWER SAVING</string>
     <string name="pt_mc_ps">Multicore Power Saving</string>
-    <string name="mt_io_ctrl">IO Scheduler Settings</string>
+    <string name="mt_io_ctrl">Setări IO Scheduler</string>
     <!-- 2.1.11-->
     <string name="hotplug">HOTPLUG</string>
     <string name="pt_hp">Generic Hotplug</string>
@@ -388,8 +388,8 @@ Translation by Laurentiu1996
     <string name="pt_thermal">Thermal Control</string>
     <string name="mt_mem_usage">Utilizare Memorie</string>
     <string name="pt_drop_caches">Clean drop caches</string>
-    <string name="oom_default">Valori initiale</string>
-    <string name="ps_mc_ps">Incearca gruparea proceselor in cat mai putine nuclee | Current: </string>
+    <string name="oom_default">Valori inițiale</string>
+    <string name="ps_mc_ps">Încearcă gruparea proceselor în cât mai puține nuclee | Actual: </string>
     <string-array name="mc_ps_array">
         <item>Oprit</item>
         <item>Pornit</item>
@@ -398,54 +398,54 @@ Translation by Laurentiu1996
     <string name="pt_gpu_fmax">Frecvenţa maximă GPU</string>
     <string name="pt_gpugov_set">Controlul GPU</string>
     <!-- 2.1.13-->
-    <string name="pt_int_sd">Internal SD Card</string>
-    <string name="pt_ext_sd">External SD Card</string>
+    <string name="pt_int_sd">SD Card Intern</string>
+    <string name="pt_ext_sd">SD Card Extern</string>
     <string name="save_batt">Power Saving</string>
     <string name="ksm_sleep_times">Sleep times:</string>
     <string name="ksm_pages_scanned">Pages Scanned:</string>
-    <string name="info_auto_sd">Lăsati necompletat pentru autodetectare</string>
+    <string name="info_auto_sd">Lăsați necompletat pentru autodetectare</string>
     <!--2.1.15-->
-    <string name="krait">Undervolting Settings</string>
-    <string name="pt_krait_boost">Decrease voltage</string>
-    <string name="ps_krait_boost">The voltage is decreased by 25mV for Nominal, Fast and Faster bin chips if enabled</string>
-    <string name="pt_krait_thres">Threshold frequency</string>
-    <string name="pt_krait_hi">Voltage for higher frequencies</string>
-    <string name="ps_krait_hi">Apply for frequencies higher than threshold | Current: %s μV</string>
-    <string name="pt_krait_lo">Voltage for lower frequencies</string>
-    <string name="ps_krait_lo">Apply for frequencies lower than threshold | Current: %s μV</string>
+    <string name="krait">Setări Undervolting</string>
+    <string name="pt_krait_boost">Micșorează tensiunea</string>
+    <string name="ps_krait_boost">La activare, tensiunea este micșorată cu 25mV pentru Nominal, Fast și Faster bin chips</string>
+    <string name="pt_krait_thres">Pragul de frecvență</string>
+    <string name="pt_krait_hi">Tensiunea pentru frecvențe mari</string>
+    <string name="ps_krait_hi">Se aplică pentru frecvențele mai mari decât pragul | Actual: %s μV</string>
+    <string name="pt_krait_lo">Tensiunea pentru frecvențe mici</string>
+    <string name="ps_krait_lo">Se aplică pentru frecvențele mai mici decât pragul | Actual: %s μV</string>
     <!--2.1.16-->
-    <string name="donor">Donează folosind PayPal</string>
-    <string name="paypal">Dacă această aplicatie iti este folositoare</string>
+    <string name="donor">Donează prin PayPal</string>
+    <string name="paypal">Dacă această aplicatie îți este folositoare</string>
     <!--2.1.18-->
     <string name="liveoc">Live OC</string>
-    <string name="oc_value">OC Value (%)</string>
+    <string name="oc_value">Valoare OC (%)</string>
     <string name="oc_target_low">OC Target Low</string>
     <string name="oc_target_high">OC Target High</string>
 
     <string name="pt_initd">Utilizează script init.d</string>
-    <string name="pt_script_name">Denumire fisier</string>
+    <string name="pt_script_name">Denumire fișier</string>
     <string name="mt_calib">Calibrare</string>
     <string name="msmhotplug">MSM HOTPLUG</string>
     <string name="pt_msmhotplug">Activează MSM Hotplug</string>
-    <string name="mt_calib_nok">Dispozitivul trebuie sa fie cuplat la incarcator si incarcat complet.</string>
-    <string name="mt_calib_ok">Apasa pe butonul Calibrare, apoi deconecteaza dispozitivul de la incarcator.</string>
-    <string name="mt_calib_chk">Restarteaza după calibrare</string>
-    <string name="boot_wait">Asteptati pana secventa de boot este complată…</string>
+    <string name="mt_calib_nok">Dispozitivul trebuie să fie cuplat la încărcător și încărcat complet.</string>
+    <string name="mt_calib_ok">Apasă butonul Calibrare, apoi deconectează dispozitivul de la încărcător.</string>
+    <string name="mt_calib_chk">Restartează după calibrare</string>
+    <string name="boot_wait">Așteptați până secvența de boot este completă…</string>
     <string name="no_file">%s nu există !</string>
-    <string name="no_settings">Setari avansate indisponibile</string>
-    <string name="bk_name">Backup name</string>
-    <string name="bk_ok">Backup operation succeeded.</string>
-    <string name="bk_nok">Error ! Backup operation failed.</string>
+    <string name="no_settings">Setări avansate indisponibile</string>
+    <string name="bk_name">Denumire Backup</string>
+    <string name="bk_ok">Operație încheiată cu succes.</string>
+    <string name="bk_nok">Eroare ! Operație nereușită.</string>
 
-    <string name="err_file">Error ! Can\'t create folder %s</string>
-    <string name="backup_restore">Backup and Restore Settings</string>
+    <string name="err_file">Eroare ! Fișierul %s nu poate fi creat</string>
+    <string name="backup_restore">Salvare și Restaurare date</string>
 
-    <string name="bkup_del_title">Delete Backup</string>
-    <string name="no_bkup_info">No Backups</string>
-    <string name="no_bkup_sinfo">Use menu to create backup.</string>
+    <string name="bkup_del_title">Șterge Backup</string>
+    <string name="no_bkup_info">Nu există fișiere backup</string>
+    <string name="no_bkup_sinfo">Utilizează menu pentru a cree un nou fișier backup.</string>
     <string name="bkup_info">Tap on item to restore it. Longtap to delete it.</string>
-    <string name="no">NO</string>
-    <string name="create_bkup">Create Backup</string>
-    <string name="restore_bkup_title">Restore Backup</string>
-    <string name="restore_bkup">%s will be restored. Continue?</string>
+    <string name="no">NU</string>
+    <string name="create_bkup">Creează Backup</string>
+    <string name="restore_bkup_title">Restaurează Backup</string>
+    <string name="restore_bkup">%s va fi restaurat. Continuați?</string>
 </resources>
