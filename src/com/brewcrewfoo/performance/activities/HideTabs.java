@@ -39,9 +39,10 @@ public class HideTabs extends Activity implements Constants, ActivityThemeChange
                         dataAdapter.insert(item, to);
                         dataAdapter.notifyDataSetChanged();
                         String s="";
-                        for(int i=0;i<dataAdapter.getCount();i++){
+                        for(int i=0;i<getResources().getStringArray(R.array.tabs).length;i++){
                             s+=dataAdapter.getItem(i).getId()+":";
                         }
+
                         mPreferences.edit().putString("tab_ids",s).apply();
                         MainActivity.thide=true;
                     }
@@ -80,7 +81,7 @@ public class HideTabs extends Activity implements Constants, ActivityThemeChange
             if((tid!=null)&&(!tid.equals(""))) {
                 int id=Integer.valueOf(tid);
                 final String sTab=getResources().getStringArray(R.array.tabs)[id];
-                if (Helpers.is_Tab_available(id)) TabList.add(new Tab(sTab, mPreferences.getBoolean(sTab, true), id));
+                TabList.add(new Tab(sTab, mPreferences.getBoolean(sTab, true), id));
             }
         }
 
