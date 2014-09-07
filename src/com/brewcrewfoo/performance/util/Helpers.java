@@ -389,12 +389,12 @@ public class Helpers implements Constants {
     }
 
     public static boolean is_Tab_available(int i){
-        boolean flag=false;
+        boolean flag;
         switch (i){
             //case 1:flag=Helpers.getNumOfCpus()>=1;break;
             //case 2:flag=Helpers.showBattery();break;
             case 4:flag=Helpers.voltageFileExists();break;
-            default: flag=true;break;
+            default:flag=true;break;
         }
         return flag;
     }
