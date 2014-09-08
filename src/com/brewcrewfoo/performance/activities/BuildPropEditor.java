@@ -59,7 +59,6 @@ public class BuildPropEditor extends Activity implements Constants, AdapterView.
     private ListView packList;
     private LinearLayout linlaHeaderProgress;
     private LinearLayout nofiles,search;
-    private RelativeLayout tools;
     private PropAdapter adapter=null;
     private EditText filterText = null;
     private List<Prop> props = new ArrayList<Prop>();
@@ -99,8 +98,7 @@ public class BuildPropEditor extends Activity implements Constants, AdapterView.
         packList.setOnItemClickListener(this);
         linlaHeaderProgress = (LinearLayout) findViewById(R.id.linlaHeaderProgress);
         nofiles = (LinearLayout) findViewById(R.id.nofiles);
-        tools = (RelativeLayout) findViewById(R.id.tools);
-        search = (LinearLayout) findViewById(R.id.search);
+
         filterText = (EditText) findViewById(R.id.filtru);
         filterText.addTextChangedListener(new TextWatcher() {
             @Override
@@ -115,13 +113,14 @@ public class BuildPropEditor extends Activity implements Constants, AdapterView.
                 adapter.getFilter().filter(filterText.getText().toString());
             }
         });
-
+        RelativeLayout tools = (RelativeLayout) findViewById(R.id.tools);
+        search = (LinearLayout) findViewById(R.id.search);
         tools.setVisibility(View.GONE);
         search.setVisibility(View.GONE);
-        Switch bootset= (Switch) findViewById(R.id.applyAtBoot);
-        bootset.setVisibility(View.GONE);
-        TextView tbootset=(TextView) findViewById(R.id.set_on_boot);
-        tbootset.setVisibility(View.GONE);
+        //Switch bootset= (Switch) findViewById(R.id.applyAtBoot);
+        //bootset.setVisibility(View.GONE);
+        //TextView tbootset=(TextView) findViewById(R.id.set_on_boot);
+        //tbootset.setVisibility(View.GONE);
 
         new GetPropOperation().execute();
 
@@ -207,7 +206,6 @@ public class BuildPropEditor extends Activity implements Constants, AdapterView.
                 else{
                     Collections.sort(props);
                     nofiles.setVisibility(View.GONE);
-                    tools.setVisibility(View.VISIBLE);
                     adapter = new PropAdapter(BuildPropEditor.this, R.layout.prop_item, props);
                     packList.setAdapter(adapter);
 
