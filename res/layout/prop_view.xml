@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView"
             android:layout_gravity="center_horizontal"
-            android:textSize="16dp"/>
+            android:textSize="16sp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -113,7 +113,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/apply_values"
-            android:textSize="14dp"
+            android:textSize="14sp"
             android:id="@+id/applyBtn"
             android:layout_gravity="center_vertical|right"
             android:gravity="center_vertical|center_horizontal"
