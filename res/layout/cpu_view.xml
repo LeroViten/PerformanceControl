@@ -24,6 +24,6 @@
         android:layout_width="fill_parent"
         android:layout_height="5dp"
         android:id="@+id/vcpu"
-        android:background="@color/pc_light_gray" />
+        android:background="@android:color/holo_blue_light" />
 
 </LinearLayout>

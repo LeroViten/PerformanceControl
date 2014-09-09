@@ -13,7 +13,7 @@
                 android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/pc_cat_gray"
+                android:background="@color/pc_gray"
                 android:id="@+id/lsw1">
 
                 <Switch
@@ -127,7 +127,7 @@
                 android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/pc_cat_gray"
+                android:background="@color/pc_gray"
                 android:layout_marginTop="20dp"
                 android:id="@+id/lsw2">
 

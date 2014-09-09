@@ -11,6 +11,6 @@
         android:text="@string/mt_calib_chk"
         android:id="@+id/sw"
         android:checked="true"
-        android:textColor="@color/pc_blue" />
+        />
 
 </LinearLayout>

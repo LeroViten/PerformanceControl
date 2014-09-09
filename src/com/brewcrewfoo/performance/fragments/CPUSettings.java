@@ -434,7 +434,7 @@ public class CPUSettings extends Fragment implements SeekBar.OnSeekBarChangeList
             if (MainActivity.mCPUon.get(i).equals("0")) {
                 vc.setBackgroundColor(getResources().getColor(R.color.pc_light_gray));
             } else {
-                vc.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_dark));
+                vc.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_light));
             }
     }
 

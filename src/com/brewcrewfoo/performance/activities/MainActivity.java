@@ -53,9 +53,12 @@ public class MainActivity extends Activity implements Constants,ActivityThemeCha
         setTheme();
         setContentView(R.layout.activity_main);
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
+
         PagerTabStrip mPagerTabStrip = (PagerTabStrip) findViewById(R.id.pagerTabStrip);
-        mPagerTabStrip.setBackgroundColor(getResources().getColor(R.color.pc_light_gray));
-        mPagerTabStrip.setTabIndicatorColor(getResources().getColor(R.color.pc_blue));
+
+        //mPagerTabStrip.setBackgroundColor(getResources().getColor(R.color.pc_light_gray));
+        mPagerTabStrip.setTabIndicatorColor(getResources().getColor(android.R.color.holo_blue_light));
+
         mPagerTabStrip.setDrawFullUnderline(true);
         titleAdapter = new TitleAdapter(getFragmentManager());
         if(savedInstanceState==null) {

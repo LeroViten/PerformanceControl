@@ -197,7 +197,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/mt_start"
                 android:id="@+id/apply"
-                android:textSize="14dp" />
+                android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>
 
