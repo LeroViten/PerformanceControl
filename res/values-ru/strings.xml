@@ -453,4 +453,8 @@
     <string name="create_bkup">Создать Бекап</string>
     <string name="restore_bkup_title">Восстановить бекап</string>
     <string name="restore_bkup">%s будет восстановлено. Продолжить?</string>
+    
+    <!-- Compilation fix -->
+    <string name="CPU_VIEW_1">1</string>
+    <string name="ver_dialog_Medium_Text">Средний текст</string>
 </resources>
