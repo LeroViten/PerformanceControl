@@ -373,10 +373,10 @@ public class Advanced extends PreferenceFragment implements OnSharedPreferenceCh
 
         int currentProgress =min;
         if (key.equals("pref_viber")) {
-            currentProgress = Integer.parseInt(Helpers.readOneLine(path));
+        	currentProgress = Integer.parseInt(vib.get_val(path));
         }
         else{
-            currentProgress = Integer.parseInt(vib.get_val(path));
+        	currentProgress = Integer.parseInt(Helpers.readOneLine(path));
         }
         if(currentProgress>max) currentProgress=max-min;
         else if(currentProgress<min) currentProgress=0;
